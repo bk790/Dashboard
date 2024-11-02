@@ -30,6 +30,7 @@ elif statistics_type == 'Yearly Statistics' and 'selected_year' in locals():
     st.plotly_chart(px.bar(yearly_sales, x='Year', y='Automobile_Sales', title='Yearly Automobile Sales Comparison'))
 
 
+
 # Run the app
 if __name__ == '__main__':
     app.run_server(host='0.0.0.0', port=int(os.environ.get("PORT", 8050)), debug=True)
