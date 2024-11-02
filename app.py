@@ -100,3 +100,4 @@ def update_output_container(selected_statistics, input_year):
 # Run the app
 if __name__ == '__main__':
     app.run_server(debug=True)
+
