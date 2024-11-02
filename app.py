@@ -3,7 +3,10 @@ import pandas as pd
 import plotly.express as px
 
 # Load the data
-data = pd.read_csv('historical_automobile_sales.csv')
+try:
+    data = pd.read_csv('historical_automobile_sales.csv')
+except Exception as e:
+    st.error(f"Error loading data: {e}")
 
 # Title
 st.title("Automobile Statistics Dashboard")
@@ -12,8 +15,10 @@ st.title("Automobile Statistics Dashboard")
 statistics_type = st.selectbox("Select Statistics:", 
                                 ["Yearly Statistics", "Recession Period Statistics"])
 
-# Dropdown to select year (only if "Yearly Statistics" is selected)
+# Initialize selected_year
 selected_year = None
+
+# Dropdown to select year (only if "Yearly Statistics" is selected)
 if statistics_type == "Yearly Statistics":
     year_list = sorted(data['Year'].unique())
     selected_year = st.selectbox("Select Year:", year_list)
