@@ -61,5 +61,3 @@ If you'd like to contribute to this project, feel free to fork the repository an
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
-
-This README includes all the necessary details for users to understand the purpose of the dashboard, how to use it, and the technologies involved. You can adjust and add specific details about your data sources and any additional features or customizations you've made.
